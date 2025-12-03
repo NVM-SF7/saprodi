@@ -62,6 +62,11 @@
                     </li>
                 @else
                     <li class="nav-item">
+                        <a class="nav-link fw-semibold btn-register-nav" href="{{ route('register') }}">
+                            <i class="fas fa-user-plus me-1"></i>DAFTAR
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link fw-semibold btn-login-nav" href="{{ route('login') }}">
                             <i class="fas fa-sign-in-alt me-1"></i>LOGIN
                         </a>
@@ -166,8 +171,22 @@
         margin: 5px 0;
     }
 
+    .btn-register-nav {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 25px;
+        padding: 6px 18px !important;
+        margin-left: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-register-nav:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.8);
+        transform: translateY(-2px);
+    }
+
     .btn-login-nav {
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 25px;
         padding: 8px 20px !important;
         margin-left: 10px;
@@ -175,7 +194,7 @@
     }
 
     .btn-login-nav:hover {
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.4);
         transform: translateY(-2px);
     }
 
@@ -223,8 +242,9 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
+        .btn-register-nav,
         .btn-login-nav {
-            margin: 10px auto;
+            margin: 5px auto;
             display: inline-block;
         }
     }

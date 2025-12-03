@@ -46,6 +46,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        // User yang register selalu role 'user', redirect ke landing page
+        return redirect('/');
     }
 }
